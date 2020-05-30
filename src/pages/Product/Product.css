@@ -1,0 +1,183 @@
+.product {
+    width: 100%;
+}
+
+.product__container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-areas: 
+        "image ."
+        "image name"
+        "image ."
+        "image price"
+        "image ."
+        "image choose"
+        "image sizes"
+        "image sizes"
+        "image .";
+}
+
+.product__image {
+    grid-area: image;
+    height: 400px;
+    position: relative;
+}
+
+.product__image img {
+    box-shadow: 6px 6px 10px #999;
+    -webkit-box-shadow: 6px 6px 10px #999; 
+	-moz-box-shadow: 6px 6px 10px #999;
+}
+.product__discount {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1A1717;
+    color: #FFF;
+    font-size: 1em;
+    font-weight: bold;
+    width: 30px;
+    height: 15px;
+    padding: 0.6em;
+}
+
+.product__name {
+    grid-area: name;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.product__prices {
+    grid-area: price;
+    display: flex;
+    align-items: center;
+}
+
+.product__regular-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.product__price {
+    margin-right: 1em;
+    font-size: 1.45em;
+    font-weight: bold;
+}
+
+.product__installments {
+    margin-right: 1em;
+    font-weight: bold;
+    color: #888;
+}
+
+.product__choose {
+    grid-area: choose;
+}
+
+.product__form {
+    grid-area: sizes;
+    display: flex;
+    flex-direction: column;
+}
+
+.product__sizes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+.size__field {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 50px;
+    width: 60px;
+    position: relative;
+}
+
+.size__field:not(:last-child) {
+    margin-right: 20px;
+}
+
+.size__button {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.size__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    transition: outline .2s;
+    color: #FFF;
+}
+
+.size__name:hover {
+    outline: 2px dashed #21b4d0;
+}
+
+.size__button:checked + .size__name {
+    outline: 2px solid #21b4d0;
+}
+
+.product__save {
+    grid-area: button;
+    width: 220px;
+    padding: 0.8em 2em;
+    background-image: linear-gradient(to right top, #0e1012, #223e4b, #1f7385, #00adb9, #12ebe2);
+    color: #FFF;
+    font-size: 0.8em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background .2s;
+}
+
+.product__save:hover {
+    background-image: linear-gradient(to right top, #0e1012, #223e4b, #1f7385, #00adb9, #12ebe2);
+    color:#000;
+
+}
+
+@media(max-width:768px) {
+    .product__container {
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "image"  "name"  "price"
+        "choose" "sizes" "button";
+    }
+
+    .product__image {
+        height: 240px;
+        margin: 0 auto;
+    }
+    
+    .product__name {
+        font-size: 1.4em;
+        margin: 20px 0;
+    }
+
+    .product__choose {
+        margin-top: 1em;
+    }
+
+    .product__save {
+        margin: 20px 0;
+    }
+}

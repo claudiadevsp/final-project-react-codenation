@@ -1,0 +1,141 @@
+body {
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
+.home {
+    height: 100vh;
+    position: relative;
+}
+
+.home__items {
+    width: 80%;
+    margin: 0 auto;
+    padding: 93px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.clothes__amount {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    font-size: 24px;
+    color: #000;
+    grid-column: 1 / 5;
+    background-color: #fff;
+}
+
+.clothes__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    -webkit-box-shadow: 2px 6px 10px #999;
+	-moz-box-shadow:  2px 6px 10px #999;
+    box-shadow: 2px 6px 10px #999;
+    padding: 5px;
+}
+
+.clothes__image-container {
+    position: relative;
+    transition: transform .3s;
+}
+
+.clothes__image-container:hover {
+    transform: scale(1.05);
+}
+
+.clothes__image {
+    max-width: 100%;
+    width: 281px;
+    height: 350px;
+    object-fit: cover;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 8px #999; 
+	-moz-box-shadow: 5px 5px 8px #999;
+    box-shadow: 5px 5px 8px #999;
+}
+
+.clothes__off {
+    background-image: linear-gradient(to right top, #0e1012, #223e4b, #1f7385, #00adb9, #12ebe2);
+    color: #FFF;
+    font-size: 1em;
+    font-weight: bold;
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clothes__title {
+    color: #212529;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 19px 0 12px;
+    vertical-align: middle;
+    flex: 1;
+    text-transform: uppercase;
+}
+
+.clothes__prices {
+    display: flex;
+    align-items: center;
+}
+
+.clothes__price--regular {
+    text-decoration: line-through;
+    color: #6B6B6B;
+    margin-right: 1em;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.clothes__price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.loading {
+    padding-top: 93px;
+    width: 100vw;
+    height: 10px;
+    background-color: #eee;
+    position: relative;
+}
+
+.loading__bar {
+    width: 40px;
+    height: 100%;
+    background-color: #fff;
+    animation: loading 1.2s linear infinite;
+    position: relative;
+    border: 10px dotted #6B6B6B;
+}
+
+@keyframes loading {
+    from {left: 0%};
+    to {left: 100%};
+}
+
+@media (max-width: 768px) {
+    .home__items {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .clothes__amount {
+        grid-column: 1;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
