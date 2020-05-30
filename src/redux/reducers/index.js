@@ -1,9 +1,9 @@
-let products2 = JSON.parse(localStorage.getItem('products'))
+let products = JSON.parse(localStorage.getItem('products'))
 let amount = localStorage.getItem('products_amount')
 let price = localStorage.getItem('price')
 
-if(!products2) {
-    products2 = []
+if(!products) {
+    products = []
 }
 
 if(!amount)
@@ -13,7 +13,7 @@ if(!price)
     price = 0.0
 
 let defaultState = {
-    cartProducts: products2,
+    cartProducts: products,
     products: [],
     id: null,
     size: null,
