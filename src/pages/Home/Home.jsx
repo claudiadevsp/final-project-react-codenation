@@ -28,7 +28,7 @@ const Home = ({products}) => {
                                         ? <img src={product.image} className="clothes__image" alt={product.name}/>
                                         : <img src={notFoundImage} className="clothes__image" alt={product.name}/>
                                     }
-                                    <div className="clothes__off">{product.discount_percentage}</div>
+                                    <div className="clothes__off">-{product.discount_percentage}</div>
                                 </div>
                                 </Link>
 
