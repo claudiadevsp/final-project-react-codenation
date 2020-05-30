@@ -63,11 +63,6 @@ function reducer(state = defaultState, action) {
                 ...state,
                 totalPurchase: action.totalPurchase
             }
-        case "SET_LOADING":
-            return {
-                ...state,
-                isLoading: action.isLoading
-            }
         default:
             return state
     }

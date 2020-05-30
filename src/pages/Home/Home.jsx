@@ -7,16 +7,13 @@ import Cart from '../../components/Cart/Cart'
 import Search from '../../components/Search/Search'
 import './Home.css'
 
-const Home = ({products, isLoading}) => {
+const Home = ({products}) => {
     return (
         <div className="home">
             <Header />
             <Search />
             <Cart />
-            {isLoading ? 
-                <div className="loading">
-                    <div className="loading__bar"></div>
-                </div>: (
+            {
             <main className="home__items clothes">                
                 {
                     products.map(product => (
@@ -64,15 +61,14 @@ const Home = ({products, isLoading}) => {
                 }
 
             </main>
-            )}
+            }
         </div>        
     )
 }
 
 const mapStateToProps = (state) => ({
   products: state.products,
-  quantity: state.products.length,
-  isLoading: state.isLoading
+  quantity: state.products.length
 })
 
 export default connect(mapStateToProps)(Home)
