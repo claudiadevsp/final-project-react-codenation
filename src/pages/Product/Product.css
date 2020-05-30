@@ -32,6 +32,7 @@
 	-moz-box-shadow: 6px 6px 10px #999;
 }
 .product__discount {
+    background-image: linear-gradient(to right top, #0e1012, #223e4b, #1f7385, #00adb9, #12ebe2);
     position: absolute;
     top: 0;
     left: 0;

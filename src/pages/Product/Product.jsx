@@ -101,7 +101,7 @@ function Product({setTotalPurchase, products, id, size, productsAmount, props, u
                         : <img src={notFoundImage} className="product__image" alt={product.name}/>
                     }
                     {product.on_sale && 
-                        <div className="product__discount">{product.discount_percentage}</div>
+                        <div className="product__discount">-{product.discount_percentage}</div>
                     }
                     </div>
                     <p className="product__name">{product.name}</p>
