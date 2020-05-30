@@ -72,7 +72,7 @@ const Search = ({ products, items, setSearchItems}) => {
                     ))}
                     </>
                 ) : (
-                    <div className="no_items">Produto não encontrado!</div>
+                    <div className="no__items">Produto não encontrado!</div>
                 )}
 
             </main>
