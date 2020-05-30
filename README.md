@@ -4,6 +4,7 @@
 <p>git clone https://github.com/claudiadevsp/final-project-react-codenation.git</p>
 <p> npm i </p>
 <p> npm start </p>
+<p> run in http://localhost:3000 </p>
 
 
 
